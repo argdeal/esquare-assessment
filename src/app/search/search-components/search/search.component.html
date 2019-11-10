@@ -1,0 +1,13 @@
+<div class="container">
+  <mat-form-field>
+    <input 
+      matInput 
+      #inputTxt 
+      type="text" 
+      placeholder="Search..." 
+      (input)="term$.next(inputTxt.value)"
+    />
+    <mat-hint align="start"><i>Enter book title</i> </mat-hint>
+    <mat-icon matSuffix>search</mat-icon>
+  </mat-form-field>
+</div>

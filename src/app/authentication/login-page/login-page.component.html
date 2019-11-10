@@ -1,0 +1,28 @@
+<div class="container">
+  <form [formGroup]="form" class="login-form">
+    <div>
+      Please login
+    </div>
+
+    <mat-form-field class="full-width">
+      <input
+        type="text"
+        matInput
+        formControlName="username"
+        placeholder="Username"
+      />
+    </mat-form-field>
+
+    <div>
+      <button
+        mat-stroked-button
+        color="primary"
+        type="submit"
+        (click)="login()"
+        [disabled]="!form.valid"
+      >
+        Login
+      </button>
+    </div>
+  </form>
+</div>

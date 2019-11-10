@@ -1,0 +1,21 @@
+<div class="container" (click)="openDialog(book)">
+  <div class="pic">
+      <img src="{{ imgSrc }}" alt="book picture" width="32" height="42" />
+  </div>
+  <div class="data">
+    <h3 *ngIf="book.volumeInfo && info.title; else tna">
+      {{ info.title }}
+    </h3>
+    <div *ngIf="book.volumeInfo && info.authors; else ana">
+      by&nbsp;<span class="authors">{{ info.authors.join(", ") }}</span>
+    </div>
+  </div>
+</div>
+
+<ng-template #tna>
+  <h3>Title not available</h3>
+</ng-template>
+
+<ng-template #ana>
+  <span class="author">author(s) not available</span>
+</ng-template>

@@ -1,0 +1,38 @@
+<h2 mat-dialog-title>{{ info.title }}</h2>
+<div mat-dialog-content>
+  <section class="header">
+    <img src="{{ imgSrc }}" alt="book picture" width="128" height="168" />
+    <button mat-stroked-button color="primary" (click)="addToWishlist()">Add to Wishlist</button>
+  </section>
+  <section class="item">
+    <label>Authors:</label>
+    <span>{{ info.authors ? info.authors.join(", ") : 'N/A' }}</span>
+  </section>
+  <section class="item">
+    <label>Publisher:</label>
+    <span>{{ info.publisher || 'N/A' }}</span>
+  </section>
+  <section class="item">
+    <label>Year of issue:</label>
+    <span>{{ info.publishedDate ? info.publishedDate.substring(0, 4) : 'N/A' }}</span>
+  </section>
+  <section class="item" *ngIf="info.pageCount">
+    <label>Pages:</label>
+    <span>{{ info.pageCount ? info.pageCount : 'N/A' }}</span>
+  </section>
+  <section class="item">
+    <label>Categories:</label>
+    <span>{{ info.categories && info.categories.length > 0 ? info.categories[0] : 'N/A' }}</span>
+  </section>
+  <section class="item" *ngIf="lang">
+    <label>Language:</label>
+    <span class="lang">{{ lang }}</span>
+  </section>
+  <section class="description" *ngIf="info.description">
+    <label>Description:</label>
+    <span>{{ info.description ? info.description.substring(0, 400) : 'N/A' }}...</span>
+  </section>
+ </div>
+<div mat-dialog-actions>
+  <button mat-stroked-button (click)="onCloseClick()">Close</button>
+</div>

@@ -1,0 +1,36 @@
+section.item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px;
+
+    label {
+        font-weight: bold;
+        margin-right: 6px;
+        // width: 110px;
+    }
+
+    .lang {
+        text-transform: capitalize;
+    }
+}
+
+section.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+section.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 5px;
+    label {
+        font-weight: bold;
+        display: block;
+    }
+}

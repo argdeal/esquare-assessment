@@ -1,0 +1,9 @@
+<div class="container">
+  <mat-paginator
+    #paginator
+    [length]="count"
+    [pageSize]="maxPageSize"
+    (page)="onPage($event)"
+  >
+  </mat-paginator>
+</div>

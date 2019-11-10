@@ -1,0 +1,22 @@
+<div class="container">
+  <p>
+    <app-search (search)="searchItems($event)"></app-search>
+  </p>
+
+  <p *ngIf="count">
+    <app-paging
+      [count]="count"
+      [maxPageSize]="20"
+      (onChangeIndex)="onChangeStartIndex($event)"
+    ></app-paging>
+  </p>
+
+  <p *ngIf="books$ | async as books; else loading">
+    <app-list [books]="books"></app-list>
+  </p>
+  <ng-template #loading>
+    <ng-container *ngIf="_loading">
+      <i class="loading">Loading...</i>
+    </ng-container>
+  </ng-template>
+</div>

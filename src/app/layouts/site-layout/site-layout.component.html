@@ -1,0 +1,23 @@
+<div class="layout">
+
+  <header>
+    <span>
+        Welcome, {{ username }}!
+    </span>
+    <span>
+      <a routerLink="/">Home</a>
+    </span>
+    <span>
+        <a routerLink="/wishlist">My Wishlist</a>
+      </span>
+    </header>
+
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+
+  <footer>
+    Copyright &copy; 2019
+  </footer>
+
+</div>

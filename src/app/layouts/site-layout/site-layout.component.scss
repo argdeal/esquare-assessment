@@ -1,0 +1,58 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100%;
+  width: 100%;
+
+  @media only screen and (max-width: 320px)  {
+    width: 400px;
+  }
+  @media only screen and (max-width: 360px) and (min-width: 321px) {
+    width: 416px;
+    height: 712px;
+  }
+
+  @media only screen and (max-width: 375px) and (min-width: 361px) {
+    width: 440px;
+  }    
+
+  @media only screen and (max-width: 414px) and (min-width: 376px) {
+    width: 440px;
+    height: 730px;
+  }
+
+  @media only screen and (max-width: 600px) and (min-width: 415px) {
+    width: 100%;
+    min-width: 548px;
+    height: 1000px;
+  }
+
+  header,
+  footer {
+    padding: 10px 1em;
+    width: 100%;
+    background-color: #eee;
+    color: #444;
+  }
+
+  header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    span {
+      margin-right: 1em;
+    }
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 2;
+    // align-self: flex-start;
+    width: 100%;
+  }
+}
