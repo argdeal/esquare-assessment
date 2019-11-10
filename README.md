@@ -1,6 +1,9 @@
-# ESquare
+# ESquare assessment solution - Aharon Gumnik
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+
+## Installation
+Download the project and run `npm install` to install all nessesary libraries
 
 ## Development server
 
